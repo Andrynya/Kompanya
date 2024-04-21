@@ -5,7 +5,7 @@ class User():
         self.__lvl = lvl
 
     def get_id(self):
-        return self.__id
+        return self.__id #Возможность отображения
 
     def get_name(self):
         return self.__name
@@ -19,17 +19,18 @@ class Admin(User):
         self.users_list = []
 
     def add_user(self, user):
-        self.users_list.append(user)
+        self.users_list.append(user) #Добавление в список
 
     def remove_user(self, user_id):
         for user in self.users_list:
             if user.get_id() == user_id:
                 self.users_list.remove(user)
-                return
+                return #Удаление из списка
 
     def get_users_list(self):
-        return self.users_list
+        return self.users_list #Отображение списка
 
+#Пример вывода информации
 admin = Admin(1, "Андрей")
 
 user1 = User(2, "Виктория")
